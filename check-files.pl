@@ -132,6 +132,9 @@ sub main {
 			return;
 		}
 		delete $files_found{lc $location};
+	}, sub{
+		my $count = shift;
+		print STDERR "total $count tracks found.\n";
 	});
 	
 	print "\n== ファイルシステムに存在する、ライブラリに含まれないファイル一覧 ==\n";
