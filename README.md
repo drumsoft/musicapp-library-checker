@@ -25,14 +25,15 @@ sudo make install
 ## scripts
 
 ```
+./check-files.pl ライブラリ.xml メディアディレクトリ ..
+	ライブラリとファイルシステム中のファイルの不整合を検出する
+
 ./dump-library.pl ライブラリ.xml
 	ライブラリをCSV形式にダンプする
 
-./check-files.pl ライブラリ.xml メディアディレクトリ ..
-	ライブラリとファイルシステムの不整合を検出する
-
 ./mixed_bitrate_albums_from_iTunes_xml.pl ライブラリ.xml
 	ビットレート混在アルバムの一覧を出力
+	表記揺れの正規化を行うために別途 Lingua::JA::Regular::Unicode が必要
 
 ./list_album_bitlates_from_iTunes_xml.pl ライブラリ.xml
 	アルバム単位でビットレートの一覧を出力
