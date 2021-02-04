@@ -1,5 +1,7 @@
 # musicapp-library-checker
 
+Analyze the Music (iTunes) library to find problems. 
+
 Music (iTunes) のライブラリを解析して問題のある箇所を見つけたりしたい。
 
 ファイル > ライブラリ > ライブラリを書き出し... で出力したxmlファイルを読み込んで色々やる。
@@ -22,21 +24,28 @@ sudo make test
 sudo make install
 ```
 
-## scripts
+## ライブラリのチェック
+
+ライブラリとファイルシステム中のファイルの不整合を検出する
 
 ```
 ./check-files.pl ライブラリ.xml メディアディレクトリ ..
-	ライブラリとファイルシステム中のファイルの不整合を検出する
+```
 
+メディアディレクトリは複数指定できる。
+
+## その他のスクリプト
+
+```
+ライブラリをCSV形式にダンプする
 ./dump-library.pl ライブラリ.xml
-	ライブラリをCSV形式にダンプする
 
+ビットレートが混在しているアルバムの一覧を出力
 ./mixed_bitrate_albums_from_iTunes_xml.pl ライブラリ.xml
-	ビットレート混在アルバムの一覧を出力
 	表記揺れの正規化を行うために別途 Lingua::JA::Regular::Unicode が必要
 
+アルバム単位でビットレートの一覧を出力
 ./list_album_bitlates_from_iTunes_xml.pl ライブラリ.xml
-	アルバム単位でビットレートの一覧を出力
 ```
 
 ## files
