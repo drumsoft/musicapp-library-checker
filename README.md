@@ -40,6 +40,9 @@ sudo make install
 ライブラリをCSV形式にダンプする
 ./dump-library.pl ライブラリ.xml
 
+「コンピレーション」フラグか、アルバムアーティストの設定が忘れられているかもしれないアルバムの一覧
+./albums_you_forgot_to_flag_as_compilation.pl ライブラリ.xml
+
 ビットレートが混在しているアルバムの一覧を出力
 ./mixed_bitrate_albums_from_iTunes_xml.pl ライブラリ.xml
 	表記揺れの正規化を行うために別途 Lingua::JA::Regular::Unicode が必要
